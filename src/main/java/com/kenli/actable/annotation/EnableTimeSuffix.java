@@ -16,14 +16,12 @@ import java.lang.annotation.*;
 public @interface EnableTimeSuffix {
     /**
      * 开启时间后缀
-     * @return
      */
     boolean value() default true;
 
     /**
      * 时间后缀格式
      * <br> 使用常量类 {@link DateTimeFormatConstant}
-     * @return
      */
     String pattern() default DateTimeFormatConstant.DATE_MONTH;
 }

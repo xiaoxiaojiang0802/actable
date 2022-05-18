@@ -10,8 +10,8 @@ import java.util.List;
  */
 public interface SysMysqlCreateTableManager {
 
-	public void createMysqlTable();
+	 void createMysqlTable();
 
-	public List<Object> getAllFields(Class<?> clas);
+	 List<Object> getAllFields(Class<?> clas);
 
 }

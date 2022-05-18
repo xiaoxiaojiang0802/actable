@@ -1,6 +1,6 @@
 #该项目是在mybatis-enhance-actable-1.5.0.RELEASE进行二次开发
 
-项目源地址
+项目源地址。
 
 # mybatis-enhance-actable-1.5.0.RELEASE
 

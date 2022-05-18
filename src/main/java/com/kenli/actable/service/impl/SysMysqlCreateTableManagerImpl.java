@@ -58,6 +58,7 @@ public class SysMysqlCreateTableManagerImpl implements SysMysqlCreateTableManage
 	/**
 	 * 读取配置文件的三种状态（创建表、更新表、不做任何事情）
 	 */
+	@Override
 	public void createMysqlTable() {
 		// 读取配置信息
 		pack = springContextUtil.getConfig(Constants.MODEL_PACK_KEY);
