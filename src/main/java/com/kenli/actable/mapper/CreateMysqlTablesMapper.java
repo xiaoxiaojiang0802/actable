@@ -1,9 +1,9 @@
 package com.kenli.actable.mapper;
 
 import com.baomidou.mybatisplus.annotation.InterceptorIgnore;
-import com.kenli.actable.command.SysMysqlColumns;
-import com.kenli.actable.command.SysMysqlTable;
-import com.kenli.actable.command.TableConfig;
+import com.kenli.actable.model.SysMysqlColumns;
+import com.kenli.actable.model.SysMysqlTable;
+import com.kenli.actable.model.TableConfig;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

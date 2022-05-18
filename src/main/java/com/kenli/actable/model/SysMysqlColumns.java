@@ -1,4 +1,4 @@
-package com.kenli.actable.command;
+package com.kenli.actable.model;
 
 /**
  * 用于查询表中字段结构详细信息

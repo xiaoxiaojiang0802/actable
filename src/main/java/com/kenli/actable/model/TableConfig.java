@@ -1,10 +1,13 @@
-package com.kenli.actable.command;
+package com.kenli.actable.model;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * @author xiaojiang
+ */
 public class TableConfig {
 
     private List<Object> list = new ArrayList<Object>();

@@ -1,6 +1,6 @@
 package com.kenli.actable.service;
 
-import com.kenli.actable.command.PageResultCommand;
+import com.kenli.actable.model.PageResultCommand;
 
 import java.util.LinkedHashMap;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.kenli.actable.command;
+package com.kenli.actable.model;
 
 import com.kenli.actable.constants.MySqlTypeConstant;
 

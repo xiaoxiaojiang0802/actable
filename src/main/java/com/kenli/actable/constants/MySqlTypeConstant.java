@@ -1,6 +1,6 @@
 package com.kenli.actable.constants;
 
-import com.kenli.actable.command.MySqlTypeAndLength;
+import com.kenli.actable.model.MySqlTypeAndLength;
 
 import java.util.HashMap;
 import java.util.Map;

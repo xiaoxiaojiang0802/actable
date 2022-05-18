@@ -1,4 +1,4 @@
-package com.kenli.actable.command;
+package com.kenli.actable.model;
 
 import java.io.Serializable;
 import java.util.List;

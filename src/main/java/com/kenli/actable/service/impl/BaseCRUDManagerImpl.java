@@ -1,7 +1,7 @@
 package com.kenli.actable.service.impl;
 
-import com.kenli.actable.command.PageResultCommand;
-import com.kenli.actable.command.SaveOrUpdateDataCommand;
+import com.kenli.actable.model.PageResultCommand;
+import com.kenli.actable.model.SaveOrUpdateDataCommand;
 import com.kenli.actable.mapper.BaseCRUDMapper;
 import com.kenli.actable.service.BaseCRUDManager;
 import com.kenli.actable.utils.ColumnUtils;

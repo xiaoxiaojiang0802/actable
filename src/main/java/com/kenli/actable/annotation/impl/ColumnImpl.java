@@ -6,6 +6,9 @@ import com.kenli.actable.utils.ColumnUtils;
 
 import java.lang.annotation.Annotation;
 
+/**
+ * @author xiaojiang
+ */
 public class ColumnImpl implements Column {
     /**
      * 字段名

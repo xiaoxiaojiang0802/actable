@@ -1,7 +1,7 @@
 package com.kenli.actable.mapper;
 
 import com.baomidou.mybatisplus.annotation.InterceptorIgnore;
-import com.kenli.actable.command.SaveOrUpdateDataCommand;
+import com.kenli.actable.model.SaveOrUpdateDataCommand;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.transaction.annotation.Transactional;
 

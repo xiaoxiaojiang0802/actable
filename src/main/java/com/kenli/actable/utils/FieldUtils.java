@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * @author xiaojiang
+ */
 public class FieldUtils {
 
     public static <T> Field getKeyField(T obj) {

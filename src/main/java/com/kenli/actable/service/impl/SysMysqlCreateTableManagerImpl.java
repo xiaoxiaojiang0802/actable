@@ -5,7 +5,7 @@ import com.kenli.actable.annotation.IgnoreUpdate;
 import com.kenli.actable.annotation.Index;
 import com.kenli.actable.annotation.Table;
 import com.kenli.actable.annotation.Unique;
-import com.kenli.actable.command.*;
+import com.kenli.actable.model.*;
 import com.kenli.actable.constants.Constants;
 import com.kenli.actable.constants.MySqlCharsetConstant;
 import com.kenli.actable.constants.MySqlEngineConstant;
