@@ -11,6 +11,7 @@ import com.xjkenli.actable.constants.MySqlEngineConstant;
 import com.xjkenli.actable.constants.MySqlTypeConstant;
 import com.xjkenli.actable.model.JavaToMysqlType;
 import com.xjkenli.actable.model.MySqlTypeAndLength;
+import io.swagger.annotations.ApiModelProperty;
 import org.apache.commons.lang3.time.DateFormatUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.util.StringUtils;
@@ -190,9 +191,17 @@ public class ColumnUtils {
         return true;
     }
 
+    /**
+     * 获取字段注释
+     *
+     * @param field field
+     * @param clasz 类
+     * @return str
+     */
     public static String getComment(Field field, Class<?> clasz) {
         Column column = getColumn(field, clasz);
         ColumnComment comment = field.getAnnotation(ColumnComment.class);
+        ApiModelProperty apiModelProperty = field.getAnnotation(ApiModelProperty.class);
         if (!hasColumnAnnotation(field, clasz)) {
             return null;
         }
@@ -201,6 +210,9 @@ public class ColumnUtils {
         }
         if (comment != null && !StringUtils.isEmpty(comment.value())) {
             return comment.value();
+        }
+        if (apiModelProperty != null && !StringUtils.isEmpty(apiModelProperty.value())) {
+            return apiModelProperty.value();
         }
         return "";
     }
@@ -309,12 +321,16 @@ public class ColumnUtils {
             return false;
         }
         Column column = field.getAnnotation(Column.class);
+        ApiModelProperty apiModelProperty = field.getAnnotation(ApiModelProperty.class);
         javax.persistence.Column columnCommon = field.getAnnotation(javax.persistence.Column.class);
         TableField tableField = field.getAnnotation(TableField.class);
         IsKey isKey = field.getAnnotation(IsKey.class);
         Id id = field.getAnnotation(Id.class);
         TableId tableId = field.getAnnotation(TableId.class);
-        if (column == null && columnCommon == null && (tableField == null || !tableField.exist())
+        if (tableField == null || !tableField.exist()) {
+            return isSimple;
+        }
+        if (column == null && columnCommon == null && apiModelProperty == null
                 && isKey == null && id == null && tableId == null) {
             // 开启了simple模式
             return isSimple;
