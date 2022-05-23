@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.kenli.actable.mapper.CreateMysqlTablesMapper">
+<mapper namespace="com.xjkenli.actable.mapper.CreateMysqlTablesMapper">
 
 	<!-- 强制指定查询表结构映射字段，避免被mybatis下划线转驼峰配置影响，导致查询不到值  -->
-	<resultMap id="SysMysqlColumnsResultMap" type="com.kenli.actable.model.SysMysqlColumns">
+	<resultMap id="SysMysqlColumnsResultMap" type="com.xjkenli.actable.model.mysql.SysMysqlColumns">
 		<result property="table_schema" column="table_schema"/>
 		<result property="table_name" column="table_name"/>
 		<result property="column_name" column="column_name"/>
@@ -24,7 +24,7 @@
 		<result property="column_comment" column="column_comment"/>
 	</resultMap>
 
-	<resultMap id="SysMysqlTableResultMap" type="com.kenli.actable.model.SysMysqlTable">
+	<resultMap id="SysMysqlTableResultMap" type="com.xjkenli.actable.model.mysql.SysMysqlTable">
 		<result property="table_catalog" column="table_catalog"/>
 		<result property="table_schema" column="table_schema"/>
 		<result property="table_name" column="table_name"/>
@@ -263,7 +263,7 @@
 	</select>
 
 	<!-- 删除索引 -->
-	<select id="dropTabelIndex" parameterType="java.util.Map">
+	<select id="dropTableIndex" parameterType="java.util.Map">
 		<foreach collection="tableMap" index="tableName" item="indexName">
 				DROP INDEX `${indexName}` on `${tableName}`
 		</foreach>
@@ -288,7 +288,6 @@
 				</foreach>
 				)
 		</foreach>
-
 	</select>
 
 	<!-- 创建唯一约束 -->
