@@ -126,23 +126,23 @@ public class SysMysqlCreateTableManagerImpl implements SysMysqlCreateTableManage
 	private Map<String, Map<String, TableConfig>> initTableMap() {
 		Map<String, Map<String, TableConfig>> baseTableMap = new HashMap<String, Map<String, TableConfig>>();
 		// 1.用于存需要创建的表名+（字段结构/表信息）
-		baseTableMap.put(Constants.NEW_TABLE_MAP, new HashMap<String, TableConfig>());
+		baseTableMap.put(Constants.NEW_TABLE_MAP, new HashMap<>());
 		// 2.用于存需要更新字段类型等的表名+结构
-		baseTableMap.put(Constants.MODIFY_TABLE_MAP, new HashMap<String, TableConfig>());
+		baseTableMap.put(Constants.MODIFY_TABLE_MAP, new HashMap<>());
 		// 3.用于存需要增加字段的表名+结构
-		baseTableMap.put(Constants.ADD_TABLE_MAP, new HashMap<String, TableConfig>());
+		baseTableMap.put(Constants.ADD_TABLE_MAP, new HashMap<>());
 		// 4.用于存需要删除字段的表名+结构
-		baseTableMap.put(Constants.REMOVE_TABLE_MAP, new HashMap<String, TableConfig>());
+		baseTableMap.put(Constants.REMOVE_TABLE_MAP, new HashMap<>());
 		// 5.用于存需要删除主键的表名+结构
-		baseTableMap.put(Constants.DROPKEY_TABLE_MAP, new HashMap<String, TableConfig>());
+		baseTableMap.put(Constants.DROPKEY_TABLE_MAP, new HashMap<>());
 		// 6.用于存需要删除唯一约束的表名+结构
-		baseTableMap.put(Constants.DROPINDEXANDUNIQUE_TABLE_MAP, new HashMap<String, TableConfig>());
+		baseTableMap.put(Constants.DROPINDEXANDUNIQUE_TABLE_MAP, new HashMap<>());
 		// 7.用于存需要增加的索引
-		baseTableMap.put(Constants.ADDINDEX_TABLE_MAP, new HashMap<String, TableConfig>());
+		baseTableMap.put(Constants.ADDINDEX_TABLE_MAP, new HashMap<>());
 		// 8.用于存需要增加的唯一约束
-		baseTableMap.put(Constants.ADDUNIQUE_TABLE_MAP, new HashMap<String, TableConfig>());
+		baseTableMap.put(Constants.ADDUNIQUE_TABLE_MAP, new HashMap<>());
 		// 9.更新表注释
-		baseTableMap.put(Constants.MODIFY_TABLE_PROPERTY_MAP, new HashMap<String, TableConfig>());
+		baseTableMap.put(Constants.MODIFY_TABLE_PROPERTY_MAP, new HashMap<>());
 		return baseTableMap;
 	}
 
