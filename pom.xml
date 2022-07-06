@@ -14,6 +14,7 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
+        <hutool.version>5.7.21</hutool.version>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -22,6 +23,14 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
                 <version>2.5.10</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- hutool 的依赖配置-->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-bom</artifactId>
+                <version>${hutool.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -55,12 +64,6 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.mybatis.scripting</groupId>
-            <artifactId>mybatis-velocity</artifactId>
-            <version>2.1.1</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
@@ -84,6 +87,16 @@
             <groupId>io.swagger</groupId>
             <artifactId>swagger-annotations</artifactId>
             <version>1.6.6</version>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-core</artifactId>
+            <version>3.5.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-extension</artifactId>
+            <version>3.5.2</version>
         </dependency>
     </dependencies>
 </project>

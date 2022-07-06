@@ -12,7 +12,6 @@ import com.xjkenli.actable.api.constants.MySqlTypeConstant;
 import com.xjkenli.actable.api.model.JavaToMysqlType;
 import com.xjkenli.actable.api.model.MySqlTypeAndLength;
 import io.swagger.annotations.ApiModelProperty;
-import org.apache.commons.lang3.time.DateFormatUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.util.StringUtils;
 
