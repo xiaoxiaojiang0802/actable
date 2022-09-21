@@ -1,6 +1,6 @@
 package com.jiangjin.actable.api.annotation;
 
-import com.jiangjin.actable.api.constants.MySqlTypeConstant;
+import com.jiangjin.actable.api.annotation.constants.MySqlTypeConstant;
 
 import java.lang.annotation.*;
 

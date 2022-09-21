@@ -1,6 +1,6 @@
 package com.jiangjin.actable.api.model;
 
-import com.jiangjin.actable.api.constants.MySqlTypeConstant;
+import com.jiangjin.actable.api.annotation.constants.MySqlTypeConstant;
 
 import java.util.HashMap;
 import java.util.Map;

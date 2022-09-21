@@ -1,4 +1,4 @@
-package com.jiangjin.actable.api.constants;
+package com.jiangjin.actable.api.annotation.constants;
 
 /**
  * mysql支持的引擎

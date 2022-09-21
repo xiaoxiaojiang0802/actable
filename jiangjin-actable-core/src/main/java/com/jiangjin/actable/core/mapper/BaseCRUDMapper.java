@@ -1,9 +1,8 @@
 package com.jiangjin.actable.core.mapper;
 
-import com.baomidou.mybatisplus.annotation.InterceptorIgnore;
 import com.jiangjin.actable.api.model.SaveOrUpdateDataCommand;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -15,8 +14,7 @@ import java.util.Map;
  *
  * @author sunchenbin
  */
-@Transactional
-@InterceptorIgnore(tenantLine = "true")
+@Mapper
 public interface BaseCRUDMapper {
 
     /**

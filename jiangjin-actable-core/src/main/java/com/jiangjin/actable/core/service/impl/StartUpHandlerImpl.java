@@ -1,9 +1,9 @@
 package com.jiangjin.actable.core.service.impl;
 
-import com.jiangjin.actable.api.constants.Constants;
+import com.jiangjin.actable.api.annotation.constants.Constants;
+import com.jiangjin.actable.api.utils.ConfigurationUtil;
 import com.jiangjin.actable.core.service.StartUpHandler;
 import com.jiangjin.actable.core.service.SysMysqlCreateTableManager;
-import com.jiangjin.actable.api.utils.ConfigurationUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

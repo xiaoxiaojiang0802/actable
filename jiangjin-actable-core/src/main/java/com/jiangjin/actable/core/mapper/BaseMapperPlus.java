@@ -13,6 +13,7 @@ import com.baomidou.mybatisplus.core.toolkit.*;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.toolkit.SqlHelper;
 import com.jiangjin.actable.api.utils.BeanCopyUtils;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.binding.MapperMethod;
 import org.apache.ibatis.logging.Log;
 import org.apache.ibatis.logging.LogFactory;
@@ -33,6 +34,7 @@ import java.util.Objects;
  * @since 2021-05-13
  */
 @SuppressWarnings("unchecked")
+@Mapper
 public interface BaseMapperPlus<M, T, V> extends BaseMapper<T> {
 
     Log log = LogFactory.getLog(BaseMapperPlus.class);

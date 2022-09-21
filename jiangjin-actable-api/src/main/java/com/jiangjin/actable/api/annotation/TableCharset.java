@@ -1,6 +1,6 @@
 package com.jiangjin.actable.api.annotation;
 
-import com.jiangjin.actable.api.constants.MySqlCharsetConstant;
+import com.jiangjin.actable.api.annotation.constants.MySqlCharsetConstant;
 
 import java.lang.annotation.*;
 

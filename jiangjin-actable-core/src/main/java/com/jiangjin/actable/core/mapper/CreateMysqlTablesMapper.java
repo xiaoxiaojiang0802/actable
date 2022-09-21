@@ -1,9 +1,9 @@
 package com.jiangjin.actable.core.mapper;
 
-import com.baomidou.mybatisplus.annotation.InterceptorIgnore;
 import com.jiangjin.actable.api.model.TableConfig;
 import com.jiangjin.actable.api.model.mysql.SysMysqlColumns;
 import com.jiangjin.actable.api.model.mysql.SysMysqlTable;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.Set;
  *
  * @author sunchenbin
  */
-@InterceptorIgnore(tenantLine = "true")
+@Mapper
 public interface CreateMysqlTablesMapper {
 
     /**

@@ -1,6 +1,6 @@
 package com.jiangjin.actable.core.service.impl;
 
-import com.jiangjin.actable.api.constants.Constants;
+import com.jiangjin.actable.api.annotation.constants.Constants;
 import com.jiangjin.actable.core.mapper.CreateMysqlTablesMapper;
 import com.jiangjin.actable.core.service.SysOracleCreateTableManager;
 import com.jiangjin.actable.api.utils.ConfigurationUtil;

@@ -1,4 +1,4 @@
-package com.jiangjin.actable.api.constants;
+package com.jiangjin.actable.api.annotation.constants;
 
 /**
  * 用于配置Oracle数据库中类型，并且该类型需要设置几个长度

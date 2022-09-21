@@ -1,4 +1,4 @@
-package com.jiangjin.actable.api.constants;
+package com.jiangjin.actable.api.annotation.constants;
 
 /**
  * 日期时间格式常量类

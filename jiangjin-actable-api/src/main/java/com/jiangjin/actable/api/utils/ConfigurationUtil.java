@@ -1,6 +1,6 @@
 package com.jiangjin.actable.api.utils;
 
-import com.jiangjin.actable.api.constants.Constants;
+import com.jiangjin.actable.api.annotation.constants.Constants;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
