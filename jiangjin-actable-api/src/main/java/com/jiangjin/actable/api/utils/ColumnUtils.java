@@ -318,16 +318,12 @@ public class ColumnUtils {
             return false;
         }
         Column column = field.getAnnotation(Column.class);
-        ApiModelProperty apiModelProperty = field.getAnnotation(ApiModelProperty.class);
         javax.persistence.Column columnCommon = field.getAnnotation(javax.persistence.Column.class);
         TableField tableField = field.getAnnotation(TableField.class);
         IsKey isKey = field.getAnnotation(IsKey.class);
         Id id = field.getAnnotation(Id.class);
         TableId tableId = field.getAnnotation(TableId.class);
-        if (tableField == null || !tableField.exist()) {
-            return isSimple;
-        }
-        if (column == null && columnCommon == null && apiModelProperty == null
+        if (column == null && columnCommon == null && (tableField == null || !tableField.exist())
                 && isKey == null && id == null && tableId == null) {
             // 开启了simple模式
             return isSimple;

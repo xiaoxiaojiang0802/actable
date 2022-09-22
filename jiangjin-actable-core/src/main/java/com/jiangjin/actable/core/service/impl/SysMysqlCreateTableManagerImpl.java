@@ -559,7 +559,7 @@ public class SysMysqlCreateTableManagerImpl implements SysMysqlCreateTableManage
     public List<Object> getAllFields(Class<?> clas) {
         String idxPrefix = springContextUtil.getConfig(Constants.TABLE_INDEX_KEY);
         String uniPrefix = springContextUtil.getConfig(Constants.TABLE_UNIQUE_KEY);
-        List<Object> fieldList = new ArrayList<Object>();
+        List<Object> fieldList = new ArrayList<>();
         Field[] fields = clas.getDeclaredFields();
 
         // 判断是否有父类，如果有拉取父类的field，这里只支持多层继承
