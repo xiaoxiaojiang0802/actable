@@ -4,9 +4,7 @@ import com.jiangjin.actable.api.annotation.constants.Constants;
 import com.jiangjin.actable.api.utils.ConfigurationUtil;
 import com.jiangjin.actable.core.service.StartUpHandler;
 import com.jiangjin.actable.core.service.SysMysqlCreateTableManager;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -19,11 +17,11 @@ import javax.annotation.Resource;
  */
 @SuppressWarnings("restriction")
 @Service
+@Slf4j
 public class StartUpHandlerImpl implements StartUpHandler {
 
-    private static final Logger log = LoggerFactory.getLogger(StartUpHandlerImpl.class);
 
-    @Autowired
+    @Resource
     private ConfigurationUtil springContextUtil;
 
     /**

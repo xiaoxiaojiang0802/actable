@@ -20,4 +20,8 @@ public class DemoEntity {
     @ApiModelProperty("演示字段")
     private String userNameDemo;
 
+    @Column(comment = "演示字段1")
+    @ApiModelProperty("演示字段1")
+    private String userNameDemo1;
+
 }

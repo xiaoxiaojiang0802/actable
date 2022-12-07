@@ -6,6 +6,7 @@ import com.jiangjin.actable.api.model.SaveOrUpdateDataCommand;
 import com.jiangjin.actable.core.service.BaseCRUDManager;
 import com.jiangjin.actable.api.utils.ColumnUtils;
 import com.jiangjin.actable.api.utils.FieldUtils;
+import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,14 +25,14 @@ import java.util.*;
  */
 @Service
 @Transactional
+@RequiredArgsConstructor
 public class BaseCRUDManagerImpl implements BaseCRUDManager {
 
     private static final Logger log = LoggerFactory.getLogger(BaseCRUDManagerImpl.class);
 
-    private static final String KEYFIELDMAP = "keyFieldMap";
+    private static final String MAYFIELD = "keyFieldMap";
 
-    @Autowired
-    private BaseCRUDMapper baseCRUDMapper;
+    private final BaseCRUDMapper baseCRUDMapper;
 
     /**
      * 根据实体对象的非Null字段作为Where条件查询结果集，如果对象的属性值都为null则返回全部数据等同于selectAll
@@ -600,7 +601,7 @@ public class BaseCRUDManagerImpl implements BaseCRUDManager {
             log.error("不支持对没有主键的表:{}进行更新！", tableName);
             throw new RuntimeException("不支持对没有主键的表进行更新！");
         }
-        dataMap.put(KEYFIELDMAP, keyFieldMap);
+        dataMap.put(MAYFIELD, keyFieldMap);
         tableMap.put(tableName, dataMap);
         SaveOrUpdateDataCommand saveOrUpdateDataCommand = new SaveOrUpdateDataCommand(tableMap);
         // 执行更新操作根据主键
@@ -659,7 +660,7 @@ public class BaseCRUDManagerImpl implements BaseCRUDManager {
             log.error("不支持对没有主键的表:{}进行更新！", tableName);
             throw new RuntimeException("不支持对没有主键的表进行更新！");
         }
-        dataMap.put(KEYFIELDMAP, keyFieldMap);
+        dataMap.put(MAYFIELD, keyFieldMap);
         tableMap.put(tableName, dataMap);
         SaveOrUpdateDataCommand saveOrUpdateDataCommand = new SaveOrUpdateDataCommand(tableMap);
         // 执行更新操作根据主键

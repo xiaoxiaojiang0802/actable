@@ -4,12 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <groupId>com.jiangjin</groupId>
     <modules>
-        <module>jiangjin-actable-core</module>
+        <module>jiangjin-actable</module>
         <module>jiangjin-actable-api</module>
         <module>jiangjin-actable-demo</module>
     </modules>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>actable</artifactId>
+    <artifactId>automiatic-table</artifactId>
     <version>1.6.0</version>
     <packaging>pom</packaging>
     <properties>
@@ -49,7 +49,7 @@
             </dependency>
             <dependency>
                 <groupId>com.jiangjin</groupId>
-                <artifactId>jiangjin-actable-core</artifactId>
+                <artifactId>jiangjin-actable</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>

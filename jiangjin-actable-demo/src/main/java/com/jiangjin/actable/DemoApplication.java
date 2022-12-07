@@ -1,15 +1,11 @@
-package com.jiangjin;
+package com.jiangjin.actable;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 
 /**
  * @author jiangjin
  */
-@MapperScan(value = {"com.jiangjin.actable.core.mapper"})
-@ComponentScan(basePackages = {"com.jiangjin.actable.**"})
 @SpringBootApplication
 public class DemoApplication {
 
