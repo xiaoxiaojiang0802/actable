@@ -284,6 +284,13 @@ public class ColumnUtils {
         return ignoreTable != null;
     }
 
+    /**
+     * 是否存在相关字段
+     *
+     * @param field filed
+     * @param clasz 类型
+     * @return bool
+     */
     public static boolean hasColumnAnnotation(Field field, Class<?> clasz) {
         // 是否开启simple模式
         boolean isSimple = isSimple(clasz);
@@ -302,7 +309,7 @@ public class ColumnUtils {
             // 开启了simple模式
             return isSimple;
         }
-        return true;
+        return false;
     }
 
     private static Column getColumn(Field field, Class<?> clasz) {
