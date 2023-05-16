@@ -377,7 +377,7 @@ public class SysMysqlCreateTableManagerImpl implements SysMysqlCreateTableManage
                     modifyTableParam.setFieldIsKey(false);
                 }
                 // 2.验证类型
-                if (!sysColumn.getData_type().toLowerCase().equals(createTableParam.getFieldType().toLowerCase())) {
+                if (!sysColumn.getData_type().equalsIgnoreCase(createTableParam.getFieldType())) {
                     modifyFieldList.add(modifyTableParam);
                     continue;
                 }

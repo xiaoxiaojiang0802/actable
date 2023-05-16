@@ -304,8 +304,13 @@ public class ColumnUtils {
         TableField tableField = field.getAnnotation(TableField.class);
         IsKey isKey = field.getAnnotation(IsKey.class);
         TableId tableId = field.getAnnotation(TableId.class);
-        if (column == null && (tableField == null || !tableField.exist())
-                && isKey == null && tableId == null) {
+        if (tableField != null) {
+            return tableField.exist();
+        }
+        if (tableId != null) {
+            return true;
+        }
+        if (column == null && isKey == null) {
             // 开启了simple模式
             return isSimple;
         }
@@ -342,9 +347,9 @@ public class ColumnUtils {
 
     private static boolean isSimple(Class<?> clasz) {
         boolean isSimple = false;
-        Table tableName = clasz.getAnnotation(Table.class);
-        if (tableName != null) {
-            isSimple = tableName.isSimple();
+        Table table = clasz.getAnnotation(Table.class);
+        if (table != null) {
+            isSimple = table.isSimple();
         }
         return isSimple;
     }
